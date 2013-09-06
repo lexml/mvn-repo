@@ -3,10 +3,9 @@
   <groupId>br.gov.lexml</groupId>
   <artifactId>pdfa-helper</artifactId>
   <versioning>
-    <release>0.0.3</release>
     <versions>
-      <version>0.0.3</version>
+      <version>0.0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20130903191147</lastUpdated>
+    <lastUpdated>20130906203620</lastUpdated>
   </versioning>
 </metadata>
