@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>br.gov.lexml</groupId>
+  <artifactId>treedistance</artifactId>
+  <versioning>
+    <versions>
+      <version>0.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130909213851</lastUpdated>
+  </versioning>
+</metadata>
