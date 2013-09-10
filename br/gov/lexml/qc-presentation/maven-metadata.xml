@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>br.gov.lexml</groupId>
+  <artifactId>qc-presentation</artifactId>
+  <versioning>
+    <versions>
+      <version>1.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130910165432</lastUpdated>
+  </versioning>
+</metadata>
