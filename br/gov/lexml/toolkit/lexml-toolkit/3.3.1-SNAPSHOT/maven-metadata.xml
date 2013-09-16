@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>br.gov.lexml.toolkit</groupId>
+  <artifactId>lexml-toolkit</artifactId>
+  <version>3.3.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20130916.195503</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20130916195503</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>3.3.1-20130916.195503-1</value>
+        <updated>20130916195503</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

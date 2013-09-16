@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>br.gov.lexml.toolkit</groupId>
+  <artifactId>lexml-toolkit</artifactId>
+  <versioning>
+    <versions>
+      <version>3.3.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130916195503</lastUpdated>
+  </versioning>
+</metadata>
