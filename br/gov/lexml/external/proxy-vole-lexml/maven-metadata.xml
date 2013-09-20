@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>br.gov.lexml.external</groupId>
+  <artifactId>proxy-vole-lexml</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130920192141</lastUpdated>
+  </versioning>
+</metadata>
