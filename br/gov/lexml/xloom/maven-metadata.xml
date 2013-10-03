@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>br.gov.lexml</groupId>
+  <artifactId>xloom</artifactId>
+  <versioning>
+    <release>2.0.3</release>
+    <versions>
+      <version>2.0.3</version>
+    </versions>
+    <lastUpdated>20131003175707</lastUpdated>
+  </versioning>
+</metadata>
