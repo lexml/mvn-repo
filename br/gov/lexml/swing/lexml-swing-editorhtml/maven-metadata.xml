@@ -3,9 +3,10 @@
   <groupId>br.gov.lexml.swing</groupId>
   <artifactId>lexml-swing-editorhtml</artifactId>
   <versioning>
+    <release>0.0.17</release>
     <versions>
-      <version>0.0.17-SNAPSHOT</version>
+      <version>0.0.17</version>
     </versions>
-    <lastUpdated>20140116190715</lastUpdated>
+    <lastUpdated>20140204111237</lastUpdated>
   </versioning>
 </metadata>
