@@ -3,10 +3,9 @@
   <groupId>br.gov.lexml.madoc</groupId>
   <artifactId>madoc</artifactId>
   <versioning>
-    <release>0.0.38</release>
     <versions>
-      <version>0.0.38</version>
+      <version>0.0.39-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140206115135</lastUpdated>
+    <lastUpdated>20140207180014</lastUpdated>
   </versioning>
 </metadata>
