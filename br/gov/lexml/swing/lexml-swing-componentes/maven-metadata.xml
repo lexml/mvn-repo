@@ -3,10 +3,9 @@
   <groupId>br.gov.lexml.swing</groupId>
   <artifactId>lexml-swing-componentes</artifactId>
   <versioning>
-    <release>1.0.10</release>
     <versions>
-      <version>1.0.10</version>
+      <version>1.0.11-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20130904141906</lastUpdated>
+    <lastUpdated>20140521142645</lastUpdated>
   </versioning>
 </metadata>
