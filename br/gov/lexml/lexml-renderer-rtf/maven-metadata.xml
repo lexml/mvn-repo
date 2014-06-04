@@ -3,10 +3,9 @@
   <groupId>br.gov.lexml</groupId>
   <artifactId>lexml-renderer-rtf</artifactId>
   <versioning>
-    <release>0.3.5</release>
     <versions>
-      <version>0.3.5</version>
+      <version>0.3.6-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20130903205446</lastUpdated>
+    <lastUpdated>20140604143201</lastUpdated>
   </versioning>
 </metadata>
