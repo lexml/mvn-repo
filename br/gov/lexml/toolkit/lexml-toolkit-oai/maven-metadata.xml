@@ -3,10 +3,10 @@
   <groupId>br.gov.lexml.toolkit</groupId>
   <artifactId>lexml-toolkit-oai</artifactId>
   <versioning>
-    <release>3.4.0</release>
+    <release>3.4.1</release>
     <versions>
-      <version>3.4.0</version>
+      <version>3.4.1</version>
     </versions>
-    <lastUpdated>20130916200204</lastUpdated>
+    <lastUpdated>20140725143151</lastUpdated>
   </versioning>
 </metadata>
