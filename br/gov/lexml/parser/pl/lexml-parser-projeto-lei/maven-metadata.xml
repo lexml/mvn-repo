@@ -3,10 +3,10 @@
   <groupId>br.gov.lexml.parser.pl</groupId>
   <artifactId>lexml-parser-projeto-lei</artifactId>
   <versioning>
-    <release>1.10.1</release>
+    <release>1.10.2</release>
     <versions>
-      <version>1.10.1</version>
+      <version>1.10.2</version>
     </versions>
-    <lastUpdated>20160319042928</lastUpdated>
+    <lastUpdated>20170111224946</lastUpdated>
   </versioning>
 </metadata>
