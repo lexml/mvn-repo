@@ -12,7 +12,7 @@
         <url>https://github.com/lexml/lexcomp/${project.artifactId}</url>
         <developerConnection>scm:git:https://github.com/lexml/lexcomp/${project.artifactId}.git</developerConnection>
         <connection>scm:git:https://github.com/lexml/lexcomp/${project.artifactId}.git</connection>
-        <tag>1.2.5</tag>
+        <tag>lexcomp-1.2.5</tag>
     </scm>
     <build>
         <sourceDirectory>src/main/scala</sourceDirectory>
