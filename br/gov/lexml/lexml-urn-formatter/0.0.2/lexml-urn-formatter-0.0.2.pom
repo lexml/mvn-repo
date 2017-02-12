@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.gov.lexml</groupId>
+	<artifactId>lexml-urn-formatter</artifactId>
+	<version>0.0.2</version>
+
+	<properties>
+		<scala.version>2.11</scala.version>
+		<scala.lib.version>${scala.version}.6</scala.lib.version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
+
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+	</properties>
+	
+	<scm>
+		<url>https://github.com/lexml/${project.artifactId}</url>
+		<developerConnection>scm:git:https://github.com/lexml/${project.artifactId}.git</developerConnection>
+		<connection>scm:git:https://github.com/lexml/${project.artifactId}.git</connection>
+		<tag>lexml-urn-formatter-0.0.2</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>GitHub ${project.artifactId} Repository</name>
+			<url>https://raw.github.com/lexml/mvn-repo/master</url>
+		</repository>
+	</distributionManagement>
+	
+
+	<repositories>
+		<repository>
+			<id>GitHub Repository</id>
+			<url>https://raw.github.com/lexml/mvn-repo/master</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
+	<dependencies>
+
+		<!-- lexml -->
+		<dependency>
+			<groupId>br.gov.lexml.parser.pl</groupId>
+			<artifactId>lexml-parser-projeto-lei</artifactId>
+			<version>1.10.5</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-slf4j-impl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.22</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src/main/scala</sourceDirectory>
+		<testSourceDirectory>src/test/scala</testSourceDirectory>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<detail>true</detail>
+					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<message>Maven artifacts for ${project.artifactId}
+						${project.version}</message>  <!-- git commit message -->
+					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/master</branch>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<repositoryName>mvn-repo</repositoryName>      <!-- github repo name -->
+					<repositoryOwner>lexml</repositoryOwner>    <!-- github username -->
+					<merge>true</merge>
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
+						'deploy' phase -->
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+		
+		
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>3.2.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceDir>src/main/scala</sourceDir>
+					<fork>true</fork>
+					<jvmArgs>
+						<jvmArg>-Xms1024m</jvmArg>
+						<jvmArg>-Xmx4096m</jvmArg>
+						<jvmArg>-Xss16m</jvmArg>
+					</jvmArgs>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
