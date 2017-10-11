@@ -3,10 +3,11 @@
   <groupId>br.gov.lexml.madoc</groupId>
   <artifactId>madoc</artifactId>
   <versioning>
-    <release>0.0.60</release>
+    <release>0.0.61</release>
     <versions>
-      <version>0.0.60</version>
+      <version>0.0.61</version>
+      <version>0.0.62-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150420163722</lastUpdated>
+    <lastUpdated>20171011154316</lastUpdated>
   </versioning>
 </metadata>
